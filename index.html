@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Welcome to smitha.dev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <title>Welcome to smitha.dev</title>
 </head>
 
-<!-- HEADER -->
-<header>
-    <nav>
-        <!--<div class="logo">
-        <a href="index.html">Home</a>
-    </div>-->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- BODY -->
 <body>
-    <h1>Welcome to smitha.dev!</h1>
-    <p>This is a test page to confirm everything is working correctly.</p>
-</body>
+  <div class="site-wrapper">
+    <!-- HEADER -->
+    <header>
+      <nav class="nav-bar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+<main class="main-content">
+  <div class="intro-box">
+    <div class="intro-image">
+      <img src="assets/images/neo-placeholder.jpg" alt="A photo of Neo from the Matrix (1999)" />
+    </div>
+    <div class="intro-text">
+      <h1 class="site-name">SMITHA.DEV<span class="cursor"></span></h1>
+      <p>Hi! I'm Allison; a computer science student, database enthusiast, and artist with a love for graphic design.</p>
+      <ul>
+        <li>Website and systems development</li>
+        <li>Hardware modification + installation</li>
+        <li>Network configuration + administration</li>
+      </ul>
+      <div class="badge-group">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxeNFO8PSlvOvudmrtLIOYdTpN6o77VKolQ&s" alt="HTML" />
+        <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png" alt="CSS" />
+        <img src="https://api.badgr.io/public/badges/kQBWBLydRGOq1148Kng3sw/image?type=png&fmt=wide" alt="JavaScript" />
+        <img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" alt="C++" />
+        <img src="https://cdn4.iconfinder.com/data/icons/flat-pro-database-set-1/32/sql-badge-512.png" alt="SQL" />
+      </div>
+    </div>
+  </div>
+</main>
+  </div>
+
+  <script src="js/site-background.js"></script>
+</body> 
 </html>
+
+
+<!-- 
+  Background animation by Fabio Ottaviani (https://codepen.io/supah/)
+  Adapted for use on smitha.dev
+-->
