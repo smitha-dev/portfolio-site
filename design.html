@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Welcome to smitha.dev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <title>Welcome to smitha.dev</title>
 </head>
 
-<!-- HEADER -->
-<header>
-    <nav>
-        <!--<div class="logo">
-            <a href="index.html">Home</a>
-        </div>-->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- BODY -->
 <body>
-    <h1>Design & Photography </h1>
+  <div class="site-wrapper">
+    <!-- HEADER -->
+    <header>
+      <nav class="nav-bar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="design.html" class="active">Design</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="gallery-grid">
-  <div class="project-tile">
-    <img src="your-art.jpg" alt="description of project">
-    <div class="hover-info">
-      <h3>Title or Project Name</h3>
-      <p>One-line description or tools used</p>
-    </div>
+    <!-- BODY -->
+    <main class="main-box">
+      <h1 class="page-title">Design & Photography </h1>
+
+      <div class="gallery-grid">
+        <div class="project-tile">
+          <img src="your-art.jpg" alt="description of project">
+          <div class="hover-info">
+            <h3>Title or Project Name</h3>
+            <p>One-line description or tools used</p>
+          </div>
+        </div>
+
+        <div class="project-tile">
+          <img src="your-art.jpg" alt="description of project">
+          <div class="hover-info">
+            <h3>Title or Project Name</h3>
+            <p>One-line description or tools used</p>
+          </div>
+        </div>
+
+        <div class="project-tile">
+          <img src="your-art.jpg" alt="description of project">
+          <div class="hover-info">
+            <h3>Title or Project Name</h3>
+            <p>One-line description or tools used</p>
+          </div>
+        </div>
+
+        <div class="project-tile">
+          <img src="your-art.jpg" alt="description of project">
+          <div class="hover-info">
+            <h3>Title or Project Name</h3>
+            <p>One-line description or tools used</p>
+          </div>
+        </div>
+    </main>
   </div>
-
-  <div class="project-tile">
-    <img src="your-art.jpg" alt="description of project">
-    <div class="hover-info">
-      <h3>Title or Project Name</h3>
-      <p>One-line description or tools used</p>
-    </div>
-  </div>
-
-    <div class="project-tile">
-    <img src="your-art.jpg" alt="description of project">
-    <div class="hover-info">
-      <h3>Title or Project Name</h3>
-      <p>One-line description or tools used</p>
-    </div>
-  </div>
-
-    <div class="project-tile">
-    <img src="your-art.jpg" alt="description of project">
-    <div class="hover-info">
-      <h3>Title or Project Name</h3>
-      <p>One-line description or tools used</p>
-    </div>
-  </div>
-
-</div>
+  <script src="js/site-background.js"></script>
 </body>
+
 </html>
+<!-- 
+  Background animation by Fabio Ottaviani (https://codepen.io/supah/)
+  Adapted for use on smitha.dev
+-->

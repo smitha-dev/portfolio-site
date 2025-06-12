@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Welcome to smitha.dev</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <title>Welcome to smitha.dev</title>
 </head>
 
-<!-- HEADER -->
-<header>
-    <nav>
-        <!--<div class="logo">
-            <a href="index.html">Home</a>
-        </div>-->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- BODY -->
 <body>
-    <h1>Projects</h1>
+  <div class="site-wrapper">
+    <!-- HEADER -->
+    <header>
+      <nav class="nav-bar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+        <main class="main-box">
+          <h1 class="page-title">Projects</h1>
+
+          <div class="project-block">
+        <div class="project-left">
+          
+          <img src="assets/images/placeholder.png" alt="black image with white text that reads 'placeholder'" width="100%">
+
+        </div>
+        <div class="project-right">
+          <h2>Project Title</h2>
+          <p>What I made, what does it do, what did I use, why did I make it</p>
+          <br>
+          <ul class="badge-list">
+            tools used (badges?)
+          </ul>
+          <a href="link to GitHub or PDF">View Code</a>
+        </div>
+      </div>
+
+          <div class="project-block">
+        <div class="project-left">
+
+          <img src="assets/images/placeholder.png" alt="black image with white text that reads 'placeholder'" width="100%">
+
+        </div>
+        <div class="project-right">
+          <h2>Project Title</h2>
+          <p>What I made, what does it do, what did I use, why did I make it</p>
+          <br>
+          <ul class="badge-list">
+            tools used (badges?)
+          </ul>
+          <a href="link to GitHub or PDF">View Code</a>
+        </div>
+      </div>
 
 
-    <div class="project-block">
-  <div class="project-left">
-    [PDF preview, screenshot, or demo]
+    </main>
   </div>
-  <div class="project-right">
-    <h2>Project Title</h2>
-    <p>[Short paragraph: what you made, what it does, what tools you used]</p>
-    <ul class="badge-list">
-      [C++, Assembly, Arduino, etc]
-    </ul>
-    <a href="link to GitHub or PDF">View Code</a>
-  </div>
-</div>
 
-
+  <script src="js/site-background.js"></script>
 </body>
+
 </html>
+<!-- 
+  Background animation by Fabio Ottaviani (https://codepen.io/supah/)
+  Adapted for use on smitha.dev
+-->

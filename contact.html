@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
     <title>Welcome to smitha.dev</title>
 </head>
 
-<!-- HEADER -->
-<header>
-    <nav>
-        <!--<div class="logo">
-            <a href="index.html">Home</a>
-        </div>-->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- BODY -->
 <body>
-    <h1>Contact</h1>
+    <div class="site-wrapper">
+        <!-- HEADER -->
+        <header>
+            <nav class="nav-bar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="contact-section">
-  <h2>Let’s Talk!</h2>
-  <p>Reach out if you want to chat about work, design, or cool ideas.</p>
+        <!-- BODY -->
+        <main class="main-box">
+            <h1 class="page-title">Contact</h1>
+            <div class="contact-section">
+                <h2>Let’s Talk!</h2>
+                <p>Reach out if you want to chat about work, design, or cool ideas.</p>
+                <ul class="contact-links">
+                    <li><a href="mailto:smith14817@gmail.com">Email Me</a></li>
+                    <li><a href="https://github.com/smitha-dev">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/allison-smith-a52250251/">LinkedIn</a></li>
+                </ul>
 
-  <ul class="contact-links">
-    <li><a href="mailto:smith14817@gmail.com">Email Me</a></li>
-    <li><a href="https://github.com/smitha-dev">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/allison-smith-a52250251/">LinkedIn</a></li>
-  </ul>
-
-</div>
-
+        </main>
+    </div>
+    <script src="js/site-background.js"></script>
 </body>
+
 </html>
+<!-- 
+  Background animation by Fabio Ottaviani (https://codepen.io/supah/)
+  Adapted for use on smitha.dev
+-->

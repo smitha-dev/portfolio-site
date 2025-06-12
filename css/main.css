@@ -9,17 +9,34 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
   font-family: 'Roboto', sans-serif;
   background-color: #000;
   color: white;
 }
+
 
 /* Wrapper to layer above background canvas */
 .site-wrapper {
   position: relative;
   z-index: 1;
   padding: 2rem;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: white;
+  font-weight: normal;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #b592f1;
+}
+
+a.active {
+  font-weight: bold;
 }
 
 /* ================================
@@ -78,7 +95,7 @@ main {
 .main-content {
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 2rem;  
 }
 
 /* ================================
@@ -171,4 +188,71 @@ main {
   50% {
     opacity: 0;
   }
+}
+
+
+/* ================================
+   Page Title
+================================== */
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/* ================================
+   Projects
+================================== */
+.project-block {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background: linear-gradient(to bottom, #2d2844, #1c1b2a);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-left {
+  flex: 1;
+  text-align: center;
+}
+
+.project-right {
+  flex: 2;
+  text-align: left;
+}
+
+/* ================================
+   Page stuff
+================================== */
+.main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #2d2844, #1c1b2a);
+  border-radius: 20px;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 750px;
+  margin: 0 auto; /* centers it horizontally */
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================
+   Resume
+================================== */
+iframe, embed, object {
+  max-width: 100%;
+  height: 80vh;
+  border-radius: 10px;
 }
