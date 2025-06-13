@@ -43,7 +43,7 @@ a.active {
    NAVIGATION BAR
 ================================== */
 .nav-bar {
-  background: linear-gradient(to top, #411cd37e, #d2b3b371);
+  background: linear-gradient(to top, #411cd37e, #94f1d571);
   border-radius: 20px;
   padding: 1rem 2rem;
   width: fit-content;
@@ -77,7 +77,7 @@ a.active {
 }
 
 .nav-links a:hover {
-  color: #b592f1;
+  color: #92f1d9;
 }
 
 .nav-links a.active {

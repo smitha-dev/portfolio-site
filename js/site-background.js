@@ -1,18 +1,19 @@
 const deg = (a) => Math.PI / 180 * a;
 const rand = (v1, v2) => Math.floor(v1 + Math.random() * (v2 - v1));
 const opt = {
-  particles: 800,
+  particles: 1000,
   noiseScale: 0.009,
   angle: Math.PI / 180 * -90,
   h1: 226,
   s1: 49,
   l1: 26,
 
-  h2: 291,
-  s2: 13,
-  l2: 32,
-  strokeWeight: 1.2,
-  tail: 82,
+  h2: 147,
+  s2: 30,
+  l2: 23,
+
+  strokeWeight: 5,
+  tail: 93,
 };
 const Particles = [];
 let time = 0;
