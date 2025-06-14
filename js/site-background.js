@@ -1,120 +1,70 @@
-const deg = (a) => Math.PI / 180 * a;
-const rand = (v1, v2) => Math.floor(v1 + Math.random() * (v2 - v1));
-const opt = {
-  particles: 1000,
-  noiseScale: 0.009,
-  angle: Math.PI / 180 * -90,
-  h1: 226,
-  s1: 49,
-  l1: 26,
+// ----------------------------- //
+// made with ♥ by smitha-dev     //
+// glyph rain                    //
+// ----------------------------- //
 
-  h2: 147,
-  s2: 30,
-  l2: 23,
+let glyphs = [];
 
-  strokeWeight: 5,
-  tail: 93,
-};
-const Particles = [];
-let time = 0;
+let glyphColors = ['#91A3B0', '#7A9D94', '#A5B0AC', '#453973', '#6DB19c'];
+let glyphChars = ['☽', '⚝', '☼', '★', '☆', '✬', '✯'];
 
-class Particle {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.lx = x;
-    this.ly = y;
-    this.vx = 0;
-    this.vy = 0;
-    this.ax = 0;
-    this.ay = 0;
-    this.hueSemen = Math.random();
-    this.hue = this.hueSemen > 0.5 ? 20 + opt.h1 : 20 + opt.h2;
-    this.sat = this.hueSemen > 0.5 ? opt.s1 : opt.s2;
-    this.light = this.hueSemen > 0.5 ? opt.l1 : opt.l2;
-    this.maxSpeed = this.hueSemen > 0.5 ? 3 : 2;
-  }
-
-  updatePrev() {
-    this.lx = this.x;
-    this.ly = this.y;
-  }
-
-  follow() {
-    let angle =
-      noise(this.x * opt.noiseScale, this.y * opt.noiseScale, time * opt.noiseScale) *
-        Math.PI *
-        0.5 +
-      opt.angle;
-    this.ax += Math.cos(angle);
-    this.ay += Math.sin(angle);
-  }
-
-  edges() {
-    if (this.x < 0) {
-      this.x = width;
-      this.updatePrev();
-    }
-    if (this.x > width) {
-      this.x = 0;
-      this.updatePrev();
-    }
-    if (this.y < 0) {
-      this.y = height;
-      this.updatePrev();
-    }
-    if (this.y > height) {
-      this.y = 0;
-      this.updatePrev();
-    }
-  }
-
-  update() {
-    this.follow();
-
-    this.vx += this.ax;
-    this.vy += this.ay;
-
-    let p = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-    let a = Math.atan2(this.vy, this.vx);
-    let m = Math.min(this.maxSpeed, p);
-    this.vx = Math.cos(a) * m;
-    this.vy = Math.sin(a) * m;
-
-    this.x += this.vx;
-    this.y += this.vy;
-    this.ax = 0;
-    this.ay = 0;
-
-    this.edges();
-  }
-
-  render() {
-    stroke(`hsla(${this.hue}, ${this.sat}%, ${this.light}%, .5)`);
-    line(this.x, this.y, this.lx, this.ly);
-    this.updatePrev();
-  }
+// function to allow transparency
+function colorWithAlpha(col, alpha) {
+    let c = color(col);
+    c.setAlpha(alpha);
+    return c;
 }
 
+
 function setup() {
-  let c = createCanvas(windowWidth, windowHeight);
-  c.position(0, 0);
-  c.style("z-index", "-1");
-  for (let i = 0; i < opt.particles; i++) {
-    Particles.push(new Particle(Math.random() * width, Math.random() * height));
-  }
-  strokeWeight(opt.strokeWeight);
+    let canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0, 0);
+    canvas.style('z-index', '-1');
+
+    textAlign(CENTER, CENTER);
+    textSize(24);
+
+    for (let i = 0; i < 100; i++) {
+        glyphs.push(createGlyph());
+    }
+}
+
+
+function createGlyph() {
+    return {
+        char: random(glyphChars),     // random glyph from glyphChars array
+        x: random(width),             // random horizontal position
+        y: random(-height, height),   // starts a bit above the canvas
+        speed: random(0.5, 2),        // falling speed
+        size: random(16, 64),         // size of glyph
+        opacity: 255,                 // full opacity 
+        rotation: random(-PI / 6, PI / 6), // random tilt between -30° and +30°
+        color: random(glyphColors),   // randomize colors from glyphColors array
+    };
 }
 
 function draw() {
-  time++;
-  background(0, 100 - opt.tail);
-  for (let p of Particles) {
-    p.update();
-    p.render();
-  }
-}
+    background(0, 25);
+    for (let g of glyphs) {
+        push();
+        translate(g.x, g.y);
+        rotate(g.rotation);
+        fill(colorWithAlpha(g.color, g.opacity));
+        textSize(g.size);
+        text(g.char, 0, 0);
+        pop();
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+        // update position
+        g.y += g.speed;
+
+        // recycle when off screen
+        if (g.y > height) {
+            g.x = random(width);
+            g.y = random(-100, 0);
+            g.speed = random(0.5, 2);
+            g.size = random(16, 32);
+            g.char = random(glyphChars);
+            g.rotation = random(-PI / 6, PI / 6);
+        }
+    }
 }
