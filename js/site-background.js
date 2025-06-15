@@ -5,7 +5,7 @@
 
 let glyphs = [];
 
-let glyphColors = ['#91A3B0', '#7A9D94', '#A5B0AC', '#453973', '#6DB19c'];
+let glyphColors = ['#001F1F', '#267F79', '#55AEAE', '#865E5B'];
 let glyphChars = ['☽', '⚝', '☼', '★', '☆', '✬', '✯'];
 
 // function to allow transparency
@@ -20,6 +20,7 @@ function setup() {
     let canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     canvas.style('z-index', '-1');
+    canvas.style('position', 'fixed');
 
     textAlign(CENTER, CENTER);
     textSize(24);
@@ -29,6 +30,9 @@ function setup() {
     }
 }
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
 
 function createGlyph() {
     return {
@@ -44,10 +48,15 @@ function createGlyph() {
 }
 
 function draw() {
-    background(0, 25);
+    let xOffset = (mouseX - width / 2) * 0.005;
+    let yOffset = (mouseY - height / 2) * 0.005;
+
+    background(0, 35); // trail length
+
+
     for (let g of glyphs) {
         push();
-        translate(g.x, g.y);
+        translate(g.x + g.speed * xOffset, g.y + g.speed * yOffset);
         rotate(g.rotation);
         fill(colorWithAlpha(g.color, g.opacity));
         textSize(g.size);
@@ -67,4 +76,6 @@ function draw() {
             g.rotation = random(-PI / 6, PI / 6);
         }
     }
+
 }
+
