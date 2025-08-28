@@ -1,0 +1,152 @@
+/* ================================
+        smitha.dev 
+        made with love
+================================== */
+
+
+/* ================================
+
+        Main CSS file
+
+================================== */
+
+/* .roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+
+.site-wrapper
+ {
+  --primary-color: #d5d8ed;
+  --secondary-color: #ecebf6;
+  --accent-color: #5b5bb6;
+
+  --font-body: 'Roboto', sans-serif;
+  /*--font-alt: ;*/
+  --text-main: #494E78;
+  --text-heading: #19191E;
+
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: transparent; /* p5.js canvas shows through */
+  color: var(--text-main);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================================
+   WRAPPER BOX
+================================== */
+.site-wrapper {
+  background: #ffffff90;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+/* LINKS */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* NAV */
+nav {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+nav ul li a {
+  color: var(--text-heading);
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+
+h1 {
+    font-family: "Audiowide", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+.footer-links {
+  text-align: center;
+  padding-top: 0.5em;
+
+}
+.footer-links a{
+  color: var(--text-main);
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+
+/**/
+
+hr {
+  margin: 1em;
+  border: thin solid #494e786e;
+}
+
+p {
+  color: var(--text-main);
+}
+
+i {
+  color: var(--text-main);
+  font-size: 75%;
+}
