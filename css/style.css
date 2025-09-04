@@ -1,159 +1,187 @@
 /* ================================
-        smitha.dev 
-        made with love
+            
+            smitha.dev            
+            
 ================================== */
-
 
 /* ================================
-
-        Main CSS file
-
+    variables + reset
 ================================== */
 
-.site-wrapper {
-  --primary-color: #d5d8ed;
-  --secondary-color: #ecebf6;
-  --accent-color: #5b5bb6;
-  /*--font-alt: ;*/
-  --text-main: #494E78;
-  --text-heading: #19191E;
+:root {
+    --primary-color: #d5d8ed;
+    --secondary-color: #ecebf6;
+    --accent-color: #5b5bb6;
+    --text-main: #494E78;
+    --text-heading: #19191E;
+    --font-body: 'Roboto', sans-serif;
 
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: regular;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-      background-color: var(--primary-color); /* For browsers that do not support gradients */
-  background-image: linear-gradient(var(--primary-color), var(--accent-color));
-  background: transparent;
-  /* p5.js canvas shows through */
-  color: var(--text-main);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  padding-top: 1em;
-  padding-bottom: 1em;
+    background-color: var(--primary-color);
+    /* bg fallback */
+    background-image: linear-gradient(var(--primary-color), var(--accent-color));
+    background: transparent;
+    color: var(--text-main);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
+
 
 /* ================================
-   WRAPPER BOX
+    global element styles
 ================================== */
-.site-wrapper {
-  background: #ffffff5e;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-}
-
-/* LINKS */
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--accent-color);
-}
-
-/* NAV */
-nav {
-  position: sticky;
-  top: 1em; /* keeps that nice gap */
-  z-index: 1000;
-  background-color: rgba(213, 216, 237, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  display: flex;
-  justify-content: space-between; /* logo left, links right */
-  align-items: center;
-  padding: 0.5em 1.5em; /* a little side padding */
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 20px rgba(81, 77, 82, 0.05);
-}
-
-.nav-logo h1 {
-  font-family: "Audiowide", sans-serif;
-  font-weight: 1000;
-  font-size: 1.5rem;
-  color: var(--text-heading);
-  margin: 0;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2em;
-}
-
-.nav-links a {
-  color: var(--text-main);
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: var(--accent-color);
-}
-
-
 h1 {
-  font-family: "Audiowide", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 2.5em;
-}
-
-
-/**/
-
-hr {
-  margin: 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  border: thin solid #494e786e;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2.5em;
 }
 
 p,
 ul,
 li {
-  color: var(--text-main);
+    color: var(--text-main);
+}
+
+hr {
+    margin: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: thin solid #494e786e;
 }
 
 i {
-  color: var(--text-main);
-  font-size: 75%;
+    color: var(--text-main);
+    font-size: 75%;
+}
+
+/* links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+
+/* ================================
+    layout
+================================== */
+
+.site-wrapper {
+    background: #ffffffcc;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 3rem 3rem;
+}
+
+/* nav bar */
+nav {
+    position: sticky;
+    top: 1em;
+    z-index: 1000;
+    background-color: rgba(213, 216, 237, 0.80);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: space-between;
+    /* logo left, links right */
+    align-items: center;
+    padding: 0.5em 1.5em;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(81, 77, 82, 0.05);
+}
+
+.nav-logo h1 {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    color: var(--text-heading);
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* footer*/
+.footer-links {
+    text-align: center;
+    padding-top: 0.5em;
+
+}
+
+.footer-links a {
+    color: var(--text-main);
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-links i {
+    font-size: 100%;
 }
 
 /* ================================
-   PROJECTS
+    sections
 ================================== */
+#home,
+#projects,
+#design,
+#skills,
+#contact {
+    scroll-margin-top: 5em;
+}
+
 .project-block {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  padding: 1.5rem;
-  margin: 0 auto 2rem;
-  max-width: 750px;
-  align-items: left;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin: 0 auto 2rem;
+    max-width: 1000px;
+    align-items: left;
 }
 
 .project-block a {
@@ -162,76 +190,156 @@ i {
 
 .project-block a:hover {
     color: var(--accent-color);
-      transition: color 0.2s;
+    transition: color 0.2s;
 
 }
+
 .project-left {
-  flex: 1;
-  text-align: center;
+    flex: 1;
+    text-align: center;
 }
 
 .project-right {
-  flex: 2;
-  text-align: left;
+    flex: 2;
+    text-align: left;
+}
+
+.project-block i {
+    font-size: 100%;
 }
 
 .design-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
 }
 
-/* ================================
-   CONTACT LINKS
-================================== */
-
 .contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style-type: none;
 
 }
 
 .contact-links a {
-  background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
-  text-decoration: none;
-  border-radius: 15px;
-  color: var(--text-heading);
-  padding: 0.5rem 1rem;
-  transition: color 0.2s;
+    background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+    text-decoration: none;
+    border-radius: 15px;
+    color: var(--text-heading);
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
 }
 
 .contact-links a:hover {
-  background: linear-gradient(to top, #d5d8ed, #ecebf6);
-  color: var(--accent-color);
+    background: linear-gradient(to top, #d5d8ed, #ecebf6);
+    color: var(--accent-color);
 }
 
 
+/* ================================
+    mobile layout/responsiveness
+================================== */
 
-.footer-links {
-  text-align: center;
-  padding-top: 0.5em;
+/* Default: desktop layout */
+.nav-toggle {
+    display: none;
+    /* hidden until mobile */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        display: none;
+    }
+
+    /* NAVBAR */
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        justify-content: space-between;
+        padding: 0.5em 1em;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-main);
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background: rgba(213, 216, 237, 0.9);
+        border-radius: 0 0 8px 8px;
+        padding: 1rem;
+        margin-top: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+        /* animation setup */
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    
+
+    .nav-links.active {
+  transform: scaleY(1);
+  opacity: 1;
+    }
+
+
+    /* project */
+    .project-block {
+        flex-direction: column;
+        /* stack vertically */
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .project-left img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 8px;
+    }
+
+    .project-right {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    /* designs */
+    .design-grid {
+        grid-template-columns: 1fr;
+        /* single column */
+        gap: 1.5rem;
+        justify-items: center;
+    }
+
+    .design-grid img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 8px;
+    }
 
 }
 
-.footer-links a {
-  color: var(--text-main);
-}
-
-.footer-links a:hover {
-  color: var(--accent-color);
-}
-
-.footer-links i {
-  font-size: 100%;
-}
-
-.project-block i {
-  font-size: 100%;
-}
-
-#home, #projects, #design, #skills, #contact {
-  scroll-margin-top: 5em; /* adjust to match your nav height */
-}
