@@ -94,7 +94,7 @@ a:hover {
     border-radius: 10px;
     position: relative;
     z-index: 1;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     max-width: 85%;
     margin: 0 auto;
     padding: 3rem 3rem;
@@ -106,8 +106,8 @@ nav {
     top: 1em;
     z-index: 1000;
     background-color: rgba(213, 216, 237, 0.80);
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.25);
     display: flex;
     justify-content: space-between;
@@ -178,7 +178,7 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    padding: 1.5rem;
+    padding: 0rem;
     margin: 0 auto 2rem;
     max-width: 1000px;
     align-items: left;
@@ -195,9 +195,10 @@ nav {
 }
 
 .project-left {
-    flex: 1;
+    flex: 2;
     text-align: center;
 }
+
 
 .project-right {
     flex: 2;
@@ -213,6 +214,10 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     justify-items: center;
+}
+
+.contact {
+    justify-content: center;
 }
 
 .contact-links {
@@ -237,6 +242,30 @@ nav {
     color: var(--accent-color);
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-group h3 {
+    margin-bottom: 0.25rem;
+}
+
+.skill-group p {
+    margin: 0;
+}
+
+#resume a {
+    color: var(--text-heading);
+    transition: color 0.2s;
+    text-decoration: underline;
+}
+
+#resume a:hover {
+    color: var(--accent-color);
+}
 
 /* ================================
     mobile layout/responsiveness
@@ -293,17 +322,17 @@ nav {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
         /* animation setup */
-  transform: scaleY(0);
-  transform-origin: top;
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    
+
 
     .nav-links.active {
-  transform: scaleY(1);
-  opacity: 1;
+        transform: scaleY(1);
+        opacity: 1;
     }
 
 
@@ -316,9 +345,8 @@ nav {
         gap: 1rem;
     }
 
-    .project-left img {
+    .project-left {
         width: 100%;
-        max-width: 500px;
         border-radius: 8px;
     }
 
@@ -341,5 +369,16 @@ nav {
         border-radius: 8px;
     }
 
-}
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
 
+    .contact-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+
+}

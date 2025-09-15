@@ -20,40 +20,66 @@
 
   <div class="site-wrapper">
 
-<!--    <header>
+    <!--    <header>
       <h1>SMITHA.DEV</h1>
     </header> -->
-<nav>
-  <div class="nav-logo">
-    <h1>SMITHA.DEV</h1>
-  </div>
-   <button class="nav-toggle" aria-label="Toggle navigation">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#design">Design</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <nav>
+      <div class="nav-logo">
+        <h1>SMITHA.DEV</h1>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <!--    <li><a href="#design">Design</a></li>-->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <main>
       <div id="home">
         <h2><i class="fa-solid fa-house"></i> Intro</h2>
-        <p>Hi! I'm Allison; a computer science student, database enthusiast, and artist with a love for graphic
-          design. </p>
-        <ul>
-          <li>Website and systems development</li>
-          <li>Hardware modification and installation</li>
-          <li>Network configuration and admin</li>
-          <li>Graphic design and photography </li>
-        </ul>
+        <p>Hi! I'm Allison; a computer science student with a love for building desktop applications and managing
+          data.<br>
+          I specialize in WPF, C#/C++, and SQL. I enjoy creating practical and useful interfaces with real-time database
+          integration.<br>
+          Outside of code, I love graphic design and photography!
+        </p>
       </div>
 
       <hr>
 
+      <div id="skills">
+        <h2><i class="fa-solid fa-paperclip"></i> Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>HTML/CSS, JavaScript, C#, C++, SQL</p>
+          </div>
+          <div class="skill-group">
+            <h3>Frameworks & Platforms</h3>
+            <p>.NET, WPF, p5.js</p>
+          </div>
+          <div class="skill-group">
+            <h3>Databases</h3>
+            <p>MySQL, SQL Server, SQLite, Microsoft Access</p>
+          </div>
+          <div class="skill-group">
+            <h3>Tools & Visualization</h3>
+            <p>Excel, Tableau, Power BI</p>
+          </div>
+          <div class="skill-group">
+            <h3>Operating Systems</h3>
+            <p>Windows, Linux, Unix</p>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
       <div id="projects">
         <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2><br>
         <!-- project template -->
@@ -81,35 +107,43 @@
         <!-- project -->
         <div class="project-block">
           <div class="project-left">
-
-            <img src="assets/images/placeholder.png" alt="placeholder" style="border-radius: 8px; width: 100%">
-
+            <video src="assets/images/proj_InvMan_crop.mp4" controls style="border-radius: 8px; width: 100%;">
+              Embedded videos unsupported.
+            </video>
           </div>
           <div class="project-right">
-            <h2>Project Name</h2>
-            <p>Project description. Curabitur a enim et neque aliquam pulvinar at at arcu. In blandit, dui eget sagittis
-              pellentesque, quam justo efficitur sem, ut dignissim tortor diam non nibh. Curabitur a enim et neque aliquam pulvinar at at arcu. In blandit, dui eget sagittis
-              pellentesque, quam justo efficitur sem, ut dignissim tortor diam non nibh.</p><br>
+            <h2>Inventory Management App</h2>
+            <p>This desktop app was built with C# and WPF. The purpose is to help manage character inventories with
+              real-time SQLite database integration. Users can add, modify, and delete characters and their items, with
+              live updates reflected in the UI. This project demosntrates my skills in desktop application development,
+              database management, and creating intuitive interfaces for manipulating data.
+            </p><br>
             <ul class="badge-list">
-              <i>stack</i> | <a href="link">view code</a>
+              <i>C#, WPF, SQLite</i> | <a href="https://github.com/smitha-dev/inventory-manager">view code</a>
             </ul>
           </div>
         </div>
         <!-- end project -->
+
         <!-- project -->
         <div class="project-block">
           <div class="project-left">
 
-            <img src="assets/images/placeholder.png" alt="placeholder" style="border-radius: 8px; width: 100%">
+            <iframe src="assets/SmithA_Interpreter.pdf" width="100%" height="300px"
+              style="border: 1px solid #ccc; border-radius: 8px;">
+            </iframe>
 
           </div>
           <div class="project-right">
-            <h2>Project Name</h2>
-            <p>Project description. Curabitur a enim et neque aliquam pulvinar at at arcu. In blandit, dui eget sagittis
-              pellentesque, quam justo efficitur sem, ut dignissim tortor diam non nibh. Curabitur a enim et neque aliquam pulvinar at at arcu. In blandit, dui eget sagittis
-              pellentesque, quam justo efficitur sem, ut dignissim tortor diam non nibh.</p><br>
+            <h2>Two-Pass Interpreter</h2>
+            <p>This project is a two-pass interpreter for a simple assembly language, designed for the Computer
+              Organization course (CSCI 355) at the University of Findlay. It reads an assembly program from a file
+              (tiny.txt), translates it into machine language, stores it in simulated memory, and interprets and
+              executes the instructions. The instruction set supports input/output, basic arithmetic, and data movement
+              within a simulated memory structure.</p><br>
             <ul class="badge-list">
-              <i>stack</i> | <a href="link">view code</a>
+              <i>C++</i> <!--| <a href="link">view code</a>-->
+
             </ul>
           </div>
         </div>
@@ -118,6 +152,7 @@
 
       <hr>
 
+      <!--
       <div id="design">
         <h2><i class="fa-solid fa-pen-nib"></i> Design</h2>
         <p>Curabitur a enim et neque aliquam pulvinar at at arcu. In blandit, dui eget sagittis pellentesque, quam justo
@@ -127,46 +162,43 @@
           <img src="assets/images/placeholder.png" alt="Design 1" style="width: 75%; border-radius: 8px;">
           <img src="assets/images/placeholder.png" alt="Design 2" style="width: 75%; border-radius: 8px;">
           <img src="assets/images/placeholder.png" alt="Design 3" style="width: 75%; border-radius: 8px;">
-
         </div>
 
-
-      </div>
-      <hr>
-
-      <div id="skills">
-        <h2><i class="fa-solid fa-paperclip"></i> Skills</h2>
-        <p>Nam facilisis tortor in odio faucibus accumsan. Mauris eget lorem malesuada, egestas enim et, blandit dolor.
-          Fusce in tempus felis. Integer purus quam, facilisis at magna nec, ultricies tempor tellus. </p>
       </div>
 
+      
       <hr>
+-->
+
 
       <div id="contact">
         <h2><i class="fa-solid fa-address-book"></i> Contact</h2>
-        <p>Reach out.</p><br>
-        <ul class="contact-links">
-          <li><a href="mailto:smith14817@gmail.com">Email</a></li>
-          <li><a href="https://github.com/smitha-dev">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/allison-smith-a52250251/">LinkedIn</a></li>
-        </ul>
-        <br>
+        <div class="contact-links">
+          <a href="mailto:smith14817@gmail.com"> <i class="fa-solid fa-envelope"></i> Email</a><br>
+          <a href="https://github.com/smitha-dev"> <i class="fa-brands fa-github"></i> GitHub</a><br>
+          <a href="https://www.linkedin.com/in/smitha-dev/"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div><br>
+
+        <p id="resume" style="text-align:center;">
+          Download my <a href="assets/AllisonSmith_Resume.pdf" target="_blank">resume (PDF)</a>
+        </p>
+
       </div>
+      <br>
     </main>
 
 
     <!-- FOOTER -->
     <footer>
       <div class="footer-links">
-        <p>&copy; 2025 | <a href="https://github.com/smitha-dev"><i class="fa-brands fa-github"></i></a> <a
-            href="linkedin"><i class="fa-brands fa-linkedin-in"></i></a></p>
+        <p>&copy; 2025 Allison Smith</p>
       </div>
     </footer>
 
   </div>
 
   <!-- SCRIPTS -->
-   <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/background.js"></script>
 </body>
 
