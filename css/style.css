@@ -408,7 +408,7 @@ ul {
         margin-top: 1rem;
     }
 
-    /* designs */
+        /* designs */
     .design-grid {
         grid-template-columns: 1fr;
         /* single column */
